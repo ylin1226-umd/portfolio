@@ -393,7 +393,7 @@ function home() {
   return `
 <section id="top" class="hero wrap">
   <h1>${esc(SITE.name)}</h1><p class="role">${esc(SITE.roleLine)}</p><p class="intro">${esc(SITE.intro)}</p>
-  <a class="btn" href="#/work">See my work</a><a class="btn" href="${esc(SITE.contact.resume)}" target="_blank" rel="noopener">Resume (PDF)</a>
+  <a class="btn" href="#/work">See my work</a>
   ${fig(SITE.cover)}
 </section>
 <section id="about" class="block wrap">
