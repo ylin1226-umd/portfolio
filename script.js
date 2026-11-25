@@ -26,7 +26,7 @@ const SITE = {
     linkedin: "https://www.linkedin.com/in/yi-chen-lin-a50bab3ab/",
     handshake: "https://app.joinhandshake.com/profiles/5e4ndh",
     location: "Maryland · open to UX design and UX writing internships",
-    resume: "Yi-Chen-Lin-Resume.pdf",
+    resume: "Yi-Chen-Lin-Resume/Yi-Chen-Lin-Resume.pdf",
     note: "I’d love to hear about your team. The best way to reach me is by email."
   },
 
