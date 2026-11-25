@@ -19,7 +19,7 @@ const P = (file, alt, hint, shape = "landscape", cap = "") => ({ src: "images/" 
 const SITE = {
   name: "Yi-Chen Lin",
   roleLine: "UX design · UX writing",
-  intro: "English Literature undergraduate at National Central University, Taiwan, with a background in theatre.",
+  intro: " UMD HCIM graduate student with a background in English Literature.",
   cover: P("cover-crocus.jpg", "Crocus flower with glowing bokeh lights", "Your crocus cover photo", "landscape"),
   contact: {
     email: "ylin1226@umd.edu",
