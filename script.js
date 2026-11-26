@@ -19,7 +19,7 @@ const P = (file, alt, hint, shape = "landscape", cap = "") => ({ src: "images/" 
 const SITE = {
   name: "Yi-Chen Lin",
   roleLine: "UX design · UX writing",
-  intro: " UMD HCIM graduate student with a background in English Literature.",
+  intro: "HCI graduate student at the University of Maryland with a background in English Literature and theatre, focused on user-centered design and UX writing.",
   cover: P("cover-crocus.jpg", "Crocus flower with glowing bokeh lights", "Your crocus cover photo", "landscape"),
   contact: {
     email: "ylin1226@umd.edu",
@@ -34,9 +34,9 @@ const SITE = {
     nickname: "Yi-Chen Lin",
     portrait: P("portrait.jpg", "Portrait of Yi-Chen Lin", "Your portrait", "portrait"),
     paragraphs: [
-      "I am an undergraduate with a background in English Literature at National Central University, Taiwan, with additional experience in theatre.",
-      "I’m fascinated by the different stories people carry with them: how their experiences shape the way they speak, act, and connect with others. In a way, I like observing people as if they were living novels. In teams, I was once described as a fast learner, and I’m the type of leader who makes sure everyone is taken into account when making decisions.",
-      "I recently got into photography as a new hobby for recording what I see on trips with friends and family. The crocus photo on the cover is my proudest one to date. I also enjoy video games and a very messy, mixed playlist: metal, R&B and Japanese City Pop."
+      "I am a HCI graduate student at the University of Maryland, building on a degree in English Literature from National Central University, Taiwan, and hands-on experience in theatre.",
+      "I’m fascinated by the different stories people carry with them—how their experiences shape the way they speak, act, and connect with others. This curiosity is also what draws me to HCI: understanding people and designing with their experiences in mind.",
+      "Photography has also been a longtime hobby of mine, giving me a way to document what I see while traveling with friends and family. In the future, I hope to continue using it to capture memorable moments from events. The crocus photo on the cover is my proudest one to date."
     ]
   },
 
