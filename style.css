@@ -179,12 +179,4 @@ body,nav.top,footer{transition:background-color .3s ease,color .3s ease,border-c
 @keyframes turn{to{transform:rotate(360deg)}}
 .veil{position:fixed;inset:0;z-index:100;pointer-events:none}
 
-/* email chooser menu */
-.mailwrap{position:relative;display:inline-block;margin:.4rem .6rem .4rem 0;vertical-align:baseline}
-.mailwrap>.btn{margin:0;background:none;color:var(--gold);font:inherit;line-height:inherit;letter-spacing:inherit;text-transform:none;cursor:pointer}
-.mailwrap>.btn:hover{background:var(--gold);color:var(--bg)}
-.mailmenu{display:block;position:absolute;left:0;top:calc(100% + .4rem);z-index:10;min-width:14rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.6rem;box-shadow:0 8px 24px rgba(0,0,0,.35)}
-.mailmenu[hidden]{display:none}
-.mailhead{display:block;margin:0 0 .4rem;font-size:.8rem;color:var(--muted)}
-.mailmenu a,.mailmenu button{display:block;width:100%;text-align:left;padding:.45rem .6rem;border:0;background:none;color:var(--ink);font:inherit;font-size:.95rem;line-height:1.4;border-radius:6px;text-decoration:none;cursor:pointer}
-.mailmenu a:hover,.mailmenu button:hover{background:var(--gold);color:var(--bg)}
+
