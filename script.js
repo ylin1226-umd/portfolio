@@ -48,7 +48,7 @@ const SITE = {
   roles: {
     title: "Where my skills fit",
     items: [
-      { title: "UX Designer", lines: ["I turn user pain points into simple flows and Figma prototypes.", "My two case studies take an idea from research and sketches.."] },
+      { title: "UX Designer", lines: ["I turn user pain points into simple flows and Figma prototypes.", "My two case studies take an idea from research and sketches to a mid-fidelity prototype."] },
       { title: "UX Researcher", lines: ["I start from what people say and do, then turn it into pain points, personas and design decisions.", "In Discover Tohoku, I gathered feedback from three travelers on a group trip. In Little Reborne, I worked from survey data and competitor reviews."] }
     ]
   },
@@ -89,7 +89,7 @@ const SITE = {
         },
         {
           wide: true, title: "Two parents who shaped the final design",
-          text: "I've made two personasbased on the Rewear survey findings and my review of Kidizen and Facebook Marketplace listings. Each one drove specific decisions in the prototype.",
+          text: "I've made two personas based on the Rewear survey findings and my review of Kidizen and Facebook Marketplace listings. Each one drove specific decisions in the prototype.",
           personas: [
             {
               name: "Ashley", meta: "35 · Teacher · Married with one young child",
@@ -155,7 +155,7 @@ const SITE = {
       problem: {
         statement: "Tourists to Tōhoku struggle to find reliable information about smaller towns. Details are scattered across platforms, translated inconsistently and hard to navigate, so places like Oshu City, where locals want more visitors, stay overlooked.",
         hmw: "How might we give foreign tourists the confidence to visit lesser-known towns?",
-        goal: "Prototype an app in 2 weeks that supports 1 to 2 key tasks: discovering attractions, filtering preferences and, later, travel bundles."
+        goal: "Prototype an app in 2 weeks that supports two key tasks: discovering attractions and filtering by preference."
       },
       cards: [
         {
@@ -165,7 +165,7 @@ const SITE = {
             { title: "Gaps", list: ["Few Halal food options", "Little multilingual signage", "Low publicity, so most foreigners haven’t heard of it"] }]
         },
         {
-          title: "What three students from my group said (",
+          title: "What three students from my group said",
           items: [
             { quote: "The buses have good guides, but they’re hard to find. Plus the bus stations are quite faded so they are a bit hard to read.", who: "Dara, Canada" },
             { quote: "The city is a good place to relax and has a lot of tourism potential, but lacks exposure, maybe we can give people a reason to go there", who: "Hazim, Singapore" },
@@ -236,7 +236,7 @@ const SITE = {
             {
               title: "What’s next", list: [
                 "Run usability tests with tourists to refine navigation clarity.",
-                "Add travel bundles, and test whether in app translation of signs and bus info solves the language pain point.",
+                "Add travel bundles, and test whether in-app translation of signs and bus info solves the language pain point.",
                 "Partner with local tourism boards to verify content."]
             }]
         }
@@ -246,7 +246,7 @@ const SITE = {
     {
       id: "theatre",
       title: "Theatre",
-      tagline: "Onstage and ackstage work",
+      tagline: "Onstage and backstage work",
       summary: "My experiences in theatre as an actress and as part of the costume department, which sharpened my problem solving and teamwork.",
       facts: [["Role", "Actress; makeup & costume designer"], ["Duration", "24 weeks (Holy Crab!) and 26 weeks (Filial Cannibalism)"], ["Project type", "Two stage productions"]],
       thumb: [P("theatre-thumb-1.jpg", "Holy Crab! poster", "Holy Crab! poster", "portrait"),
@@ -305,12 +305,11 @@ const SITE = {
         {
           wide: true, title: "What theatre taught me",
           text: "I learned two ways to build a character: embody their soul as an actress, or build their silhouette with costume. That mix of visual storytelling and human psychology shapes my design approach. In theatre I asked what a character wants and what stands in the way. In my personas I ask the same thing, as goals and frustrations.",
-         note: "In group work, I bring the habits from backstage: preparing ahead, checking details, and staying calm when something changes mid-show."
-}
-]
-}
-],
-
+          note: "In group work, I bring the habits from backstage: preparing ahead, checking details, and staying calm when something changes mid-show."
+        }
+      ]
+    }
+  ],
   photography: {
     heading: "Photography",
     text: "A hobby I picked up to record trips with friends and family. Besides these photos, I can offer my photography skills to support the community during events, such as documenting student–faculty interactions.",
@@ -450,9 +449,11 @@ function contactSection() {
   return `<section id="contact" class="block wrap"><h2>Contact</h2>
   <div class="card"><p class="lede">${esc(C.note)}</p>
   ${C.location ? `<p class="muted">${esc(C.location)}</p>` : ""}
-  <p>${C.email ? b("mailto:" + C.email, "Email me", false) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p></div></section>`;
+  <p>${C.email ? b("mailto:" + C.email, "Email me", false) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p>
+  ${C.email ? `<p class="muted">Or copy my email: ${esc(C.email)}</p>` : ""}
+  </div></section>`;
 }
-${C.email ? `<p class="muted">Or copy my email: ${esc(C.email)}</p>` : ""}
+
 
 
 document.getElementById("foot").innerHTML = `<p>${esc(SITE.ending)}</p><b>Fin.</b>`;
