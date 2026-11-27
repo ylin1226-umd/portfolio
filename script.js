@@ -18,14 +18,14 @@ const P = (file, alt, hint, shape = "landscape", cap = "") => ({ src: "images/" 
 
 const SITE = {
   name: "Yi-Chen Lin",
-  roleLine: "UX design · UX writing",
-  intro: "HCI graduate student at the University of Maryland with a background in English Literature and theatre, focused on user-centered design and UX writing.",
+  roleLine: "UX design · UX research",
+  intro: "HCI graduate student at the University of Maryland with a background in English Literature and theatre, focused on user-centered design and research.",
   cover: P("cover-crocus.jpg", "Crocus flower with glowing bokeh lights", "Your crocus cover photo", "landscape"),
   contact: {
     email: "ylin1226@umd.edu",
     linkedin: "https://www.linkedin.com/in/yi-chen-lin-a50bab3ab/",
     handshake: "https://app.joinhandshake.com/profiles/5e4ndh",
-    location: "Maryland · seeking UX design and UX writing internships, summer 2027",
+    location: "Maryland · seeking UX design and research internships, summer 2027",
     resume: "Yi-Chen-Lin-Resume/Yi-Chen-Lin-Resume.pdf",
     note: "I’d love to hear about your team. The best way to reach me is by email."
   },
@@ -42,14 +42,14 @@ const SITE = {
 
   offer: {
     title: "How I work",
-    text: "I start by asking people what they need, then turn their answers into clear flows and clear copy. Theatre taught me to see a character from the inside as an actress and from the outside through costume, so I check my designs from both the user's view and the page's. In group work, I make sure everyone has been heard before we decide."
+    text: "I start by asking people what they need, then turn their answers into clear flows. Theatre taught me to see a character from the inside as an actress and from the outside through costume, so I check my designs from both the user's view and the page's. In group work, I make sure everyone has been heard before we decide."
   },
 
   roles: {
     title: "Where my skills fit",
     items: [
       { title: "UX Designer", lines: ["I turn user pain points into simple flows and Figma prototypes.", "My two case studies take an idea from research and sketches.."] },
-      { title: "UX Writer", lines: ["An English Literature degree and theatre training taught me how words shape what a person feels and does.", "In Discover Tohoku, I rewrote etiquette notes and filter tags so visitors can judge a trip at a glance."] }
+      { title: "UX Researcher", lines: ["I start from what people say and do, then turn it into pain points, personas and design decisions.", "In Discover Tohoku, I gathered feedback from three travelers on a group trip. In Little Reborne, I worked from survey data and competitor reviews."] }
     ]
   },
 
@@ -450,10 +450,9 @@ function contactSection() {
   return `<section id="contact" class="block wrap"><h2>Contact</h2>
   <div class="card"><p class="lede">${esc(C.note)}</p>
   ${C.location ? `<p class="muted">${esc(C.location)}</p>` : ""}
-  <p>${C.email ? b("mailto:" + C.email, "Email me", false) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p>
-  ${C.email ? `<p class="muted">Or copy my email: ${esc(C.email)}</p>` : ""}
-  </div></section>`;
+  <p>${C.email ? b("mailto:" + C.email, "Email me", false) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p></div></section>`;
 }
+${C.email ? `<p class="muted">Or copy my email: ${esc(C.email)}</p>` : ""}
 
 
 document.getElementById("foot").innerHTML = `<p>${esc(SITE.ending)}</p><b>Fin.</b>`;
