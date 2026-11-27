@@ -445,13 +445,16 @@ const contactLinks = () => [
   C.resume && `<a href="${esc(C.resume)}" target="_blank" rel="noopener">Resume</a>`
 ].filter(Boolean).join(" · ");
 
-
 function contactSection() {
   const b = (href, label, ext) => `<a class="btn" href="${esc(href)}"${ext ? ' target="_blank" rel="noopener"' : ""}>${label}</a>`;
   return `<section id="contact" class="block wrap"><h2>Contact</h2>
   <div class="card"><p class="lede">${esc(C.note)}</p>
   ${C.location ? `<p class="muted">${esc(C.location)}</p>` : ""}
-  <p>${C.email ? b("mailto:" + C.email, "Email me") : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p></div></section>`;
+  <p>${C.email ? b(
+  "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(C.email),
+  "Email me",
+  true
+) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p></div></section>`;
 }
 
 document.getElementById("foot").innerHTML = `<p>${esc(SITE.ending)}</p><b>Fin.</b>`;
@@ -561,4 +564,3 @@ themeBtn.addEventListener("click", () => {
     })
     .finally(() => { veil.remove(); switching = false; });
 });
-
