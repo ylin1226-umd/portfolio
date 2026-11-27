@@ -446,11 +446,11 @@ const contactLinks = () => [
 
 function contactSection() {
   const b = (href, label, ext) => `<a class="btn" href="${esc(href)}"${ext ? ' target="_blank" rel="noopener"' : ""}>${label}</a>`;
+  const gmail = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(C.email);
   return `<section id="contact" class="block wrap"><h2>Contact</h2>
   <div class="card"><p class="lede">${esc(C.note)}</p>
   ${C.location ? `<p class="muted">${esc(C.location)}</p>` : ""}
-  <p>${C.email ? b("mailto:" + C.email, "Email me", false) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p>
-  ${C.email ? `<p class="muted">Or copy my email: ${esc(C.email)}</p>` : ""}
+  <p>${C.email ? b(gmail, "Email me", true) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p>
   </div></section>`;
 }
 
