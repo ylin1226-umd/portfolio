@@ -454,8 +454,6 @@ function contactSection() {
   </div></section>`;
 }
 
-
-
 document.getElementById("foot").innerHTML = `<p>${esc(SITE.ending)}</p><b>Fin.</b>`;
 const navCv = document.getElementById("navResume");
 if (C.resume) navCv.href = C.resume; else navCv.remove();
