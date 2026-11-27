@@ -25,7 +25,7 @@ const SITE = {
     email: "ylin1226@umd.edu",
     linkedin: "https://www.linkedin.com/in/yi-chen-lin-a50bab3ab/",
     handshake: "https://app.joinhandshake.com/profiles/5e4ndh",
-    location: "Maryland · seeking UX design and UX writing internships, spring/summer 2027",
+    location: "Maryland · seeking UX design and UX writing internships, summer 2027",
     resume: "Yi-Chen-Lin-Resume/Yi-Chen-Lin-Resume.pdf",
     note: "I’d love to hear about your team. The best way to reach me is by email."
   },
@@ -34,22 +34,22 @@ const SITE = {
     nickname: "Yi-Chen Lin",
     portrait: P("portrait.jpg", "Portrait of Yi-Chen Lin", "Your portrait", "portrait"),
     paragraphs: [
-      "I am a HCI graduate student at the University of Maryland, building on a degree in English Literature from National Central University, Taiwan, and hands-on experience in theatre.",
+      "I am an HCI graduate student at the University of Maryland, building on a degree in English Literature from National Central University, Taiwan, and hands-on experience in theatre.",
       "I’m fascinated by the different stories people carry with them—how their experiences shape the way they speak, act, and connect with others. This curiosity is also what draws me to HCI: understanding people and designing with their experiences in mind.",
       "Photography has also been a longtime hobby of mine, giving me a way to document what I see while traveling with friends and family. In the future, I hope to continue using it to capture memorable moments from events. The crocus photo on the cover is my proudest one to date."
     ]
   },
 
   offer: {
-    title: "What I bring to the table",
-    text: "I bring a listener’s habit of asking real people what they need, then turning their words into clear flows and clear copy. Theatre taught me to build a character from the inside as an actress and from the outside through costume, which is why I design from the user’s point of view. I learn quickly, I make sure every voice is heard before a team decides, and I can document the work with photography."
+    title: "How I work",
+    text: "I start by asking people what they need, then turn their answers into clear flows and clear copy. Theatre taught me to see a character from the inside as an actress and from the outside through costume, so I check my designs from both the user's view and the page's. In group work, I make sure everyone has been heard before we decide."
   },
 
   roles: {
     title: "Where my skills fit",
     items: [
-      { title: "UX Designer", lines: ["I turn user pain points into simple flows and Figma prototypes.", "My two case studies take an idea from interviews and sketches to a mid-fidelity prototype."] },
-      { title: "UX Writer", lines: ["An English Literature degree and theatre training taught me how words shape what a person feels and does.", "I applied that to filter tags, etiquette notes and confirmation messages in my prototypes."] }
+      { title: "UX Designer", lines: ["I turn user pain points into simple flows and Figma prototypes.", "My two case studies take an idea from research and sketches.."] },
+      { title: "UX Writer", lines: ["An English Literature degree and theatre training taught me how words shape what a person feels and does.", "In Discover Tohoku, I rewrote etiquette notes and filter tags so visitors can judge a trip at a glance."] }
     ]
   },
 
@@ -60,7 +60,7 @@ const SITE = {
       title: "Little Reborne & Co.",
       tagline: "A resale app that gives kids’ clothes a second life",
       summary: "A mobile app concept that helps parents resell and discover gently used children’s clothes, built around sustainability, convenience and community.",
-      facts: [["Role", "UX researcher & designer"], ["Duration", "3 weeks"], ["Project type", "Individual, UX online course"], ["Tools", "Figma, paper sketches"]],
+      facts: [["Role", "UX Designer"], ["Duration", "3 weeks"], ["Project type", "Individual, UX online course"], ["Tools", "Figma, paper sketches"]],
       thumb: P("lr-thumb.jpg", "Little Reborne & Co. app screens on a phone", "Product mockup: Home + Add Item screens on a phone", "wide"),
       hero: P("lr-hero.jpg", "Little Reborne & Co. final screens in a device mockup", "Product mockup: final Home, Product and Pick-up screens", "wide"),
       problem: {
@@ -76,7 +76,7 @@ const SITE = {
             { big: "73%", text: "would share revenue if someone managed the whole process for them" },
             { big: "25%", text: "keep outgrown clothes unused in the closet" },
             { big: "19%", text: "admit throwing them away" }],
-          insight: "The willingness is there. Convenience is the barrier.",
+          insight: "Most parents are open to reselling, so the design should focus on cutting the effort.",
           note: "Source: The Rewear Company (2021), consumer research on reusing kidswear."
         },
         {
@@ -85,16 +85,16 @@ const SITE = {
             { head: "Facebook Marketplace", text: "Huge reach, but built for every kind of product, not kids’ clothes." },
             { head: "Shein", text: "Fast and cheap, aimed at young women under 35. An indirect competitor." },
             { head: "Kidizen", text: "A marketplace for parents, but limited to buying and selling." }],
-          insight: "A platform that combines selling, buying, donating and lending for kids’ clothes hasn’t been explored."
+          insight: "I found no app that combines selling, buying, donating and lending kids’ clothes."
         },
         {
           wide: true, title: "Two parents who shaped the final design",
-          text: "I wrote two personas from potential sellers and buyers. Each one drove specific decisions in the prototype.",
+          text: "I've made two personasbased on the Rewear survey findings and my review of Kidizen and Facebook Marketplace listings. Each one drove specific decisions in the prototype.",
           personas: [
             {
               name: "Ashley", meta: "35 · Teacher · Married with one young child",
               photo: P("lr-persona-ashley.jpg", "Ashley, a 35-year-old teacher", "Persona photo (shown in full, never cropped)", "portrait"),
-              quote: "I wish there are more than 24 hours in a day…",
+              quote: "I wish there were more than 24 hours in a day…",
               goals: ["Find a quick, easy solution for her daughter’s outgrown goods"],
               frustrations: ["Little time to dispose of goods between preparing meals and grading papers"],
               shaped: "Ashley’s lack of time led to a short, step-by-step Add Item flow and an Arrange Pick-up page, so listing is quick and a pickup is arranged for her."
@@ -104,8 +104,8 @@ const SITE = {
               photo: P("lr-persona-diane.jpg", "Diane, a 40-year-old stay-at-home mom", "Persona photo (shown in full, never cropped)", "portrait"),
               quote: "They are growing a lot faster than I imagined!",
               goals: ["Establish a sustainable, safe and budget-friendly clothing cycle", "Find an app she can trust to buy and resell clothes"],
-              frustrations: ["Sometimes struggles with technology", "Wasting money on clothes that only last a few months before being outgrown"],
-              shaped: "Diane’s limited tech confidence led to consistent colors and components, simple filter tags and undo for buying or listing mistakes. Her interest in donating became a future feature."
+              frustrations: ["Unsure which apps are safe to buy from and pay through", "Wasting money on clothes that only last a few months before being outgrown"],
+              shaped: "Diane's need for trust led to consistent colors and components, simple filter tags and undo for buying or listing mistakes. Her interest in donating became a future feature."
             }
           ]
         },
@@ -148,14 +148,14 @@ const SITE = {
       id: "discover-tohoku",
       title: "Discover Tohoku",
       tagline: "A tourism app for less-visited places",
-      summary: "An app concept that helps foreign tourists discover lesser-known attractions in Japan’s Tōhoku region, based on a group trip to Oshu City with the TUJP language exchange program.",
+      summary: "An app concept that helps foreign tourists discover lesser-known attractions in Japan’s Tōhoku region, based on a group trip to Oshu City with the Tohoku University Japanese Program (TUJP).",
       facts: [["Role", "UX researcher & designer"], ["Duration", "2 weeks"], ["Project type", "Individual, based on a TUJP group trip"], ["Tools", "Figma, paper sketches"]],
       thumb: P("tohoku-thumb.jpg", "Discover Tohoku app screens on a phone", "Product mockup: Spot Details + tags screens on a phone", "wide"),
       hero: P("tohoku-hero.jpg", "Discover Tohoku final screens in a device mockup", "Product mockup: Homepage, Spot Details and Add Tags screens", "wide"),
       problem: {
         statement: "Tourists to Tōhoku struggle to find reliable information about smaller towns. Details are scattered across platforms, translated inconsistently and hard to navigate, so places like Oshu City, where locals want more visitors, stay overlooked.",
         hmw: "How might we give foreign tourists the confidence to visit lesser-known towns?",
-        goal: "Prototype an app in 2 weeks that supports 3 to 5 key tasks: discovering attractions, filtering preferences and, later, travel bundles."
+        goal: "Prototype an app in 2 weeks that supports 1 to 2 key tasks: discovering attractions, filtering preferences and, later, travel bundles."
       },
       cards: [
         {
@@ -165,7 +165,7 @@ const SITE = {
             { title: "Gaps", list: ["Few Halal food options", "Little multilingual signage", "Low publicity, so most foreigners haven’t heard of it"] }]
         },
         {
-          title: "What fellow travelers said",
+          title: "What three students from my group said (",
           items: [
             { quote: "The buses have good guides, but they’re hard to find. Plus the bus stations are quite faded so they are a bit hard to read.", who: "Dara, Canada" },
             { quote: "The city is a good place to relax and has a lot of tourism potential, but lacks exposure, maybe we can give people a reason to go there", who: "Hazim, Singapore" },
@@ -178,7 +178,7 @@ const SITE = {
             { head: "Scattered commuting info", text: "Bus information exists but is hard to find." },
             { head: "Fear of wasting time", text: "Tourists hesitate to visit unknown places." },
             { head: "Uncertainty", text: "Tourists stick to famous sites, and small-town info rarely surfaces on Google." }],
-          insight: "Tourists don’t lack places to go. They lack confidence that a small town is worth the trip."
+          insight: "Tourists hesitate because they can't tell whether a small town is worth the trip, so each spot page needs to answer that quickly."
         },
         {
           title: "A gap between map apps and local guides",
@@ -236,7 +236,7 @@ const SITE = {
             {
               title: "What’s next", list: [
                 "Run usability tests with tourists to refine navigation clarity.",
-                "Add travel bundles and AI translation.",
+                "Add travel bundles, and test whether in app translation of signs and bus info solves the language pain point.",
                 "Partner with local tourism boards to verify content."]
             }]
         }
@@ -245,8 +245,8 @@ const SITE = {
     /* ---------------------------------------------------------------- */
     {
       id: "theatre",
-      title: "All About Theatre",
-      tagline: "Onstage and backstage",
+      title: "Theatre",
+      tagline: "Onstage and ackstage work",
       summary: "My experiences in theatre as an actress and as part of the costume department, which sharpened my problem solving and teamwork.",
       facts: [["Role", "Actress; makeup & costume designer"], ["Duration", "24 weeks (Holy Crab!) and 26 weeks (Filial Cannibalism)"], ["Project type", "Two stage productions"]],
       thumb: [P("theatre-thumb-1.jpg", "Holy Crab! poster", "Holy Crab! poster", "portrait"),
@@ -259,12 +259,12 @@ const SITE = {
       problem: {
         title: "The challenge",
         statement: "Bring two very different characters to life, one by acting and one through makeup and costume, within tight rehearsal and backstage time limits.",
-        goal: "Learn two ways to build a character, then apply them to design."
+        goal: "Learn two ways to build a character, and make each character believable to an audience within the time I had."
       },
       cards: [
         {
           title: "Holy Crab!: playing my opposite",
-          text: "I played Libby, a Times Square street performer whose real identity is the Statue of Liberty. She was my opposite in personality, which made the process more interesting. Before rehearsals I set her goals and divided each scene into “beats”, each with an objective, an obstacle and an action. It felt like iteration in design.",
+          text: "I played Libby, a Times Square street performer whose real identity is the Statue of Liberty. She was my opposite in personality, which made the process more interesting. Before rehearsals I set her goals and divided each scene into “beats”, each with an objective, an obstacle and an action. This was my first experience of iterating.",
           items: [
             { head: "Beat 1: entering Times Square", text: "Objective: experience a day in the lives of the people I hold dear. Obstacle: Javier is yelling at a tourist. Action: shocked by the yelling." },
             { head: "Beat 2: a rude surprise", text: "Objective: grab my money back. Obstacle: Javier hurts me and I fall. Action: first shocked, I try to grab the money while panicking, then fall." }],
@@ -272,8 +272,7 @@ const SITE = {
         },
         {
           title: "Learning to smile for real",
-          text: "In rehearsal I was repeatedly told my smile didn’t look genuine. I practiced expressions in front of a mirror and moved my attention from how I looked to the audience back to the moment. By show day I had overcome my stage fright, even after doubting whether I deserved the role.",
-          photos: [
+          text: "In rehearsal I was repeatedly told my smile didn't look genuine. I practiced expressions in front of a mirror, then stopped watching myself and focused on what Libby was feeling in the scene. By show day I had worked through my stage fright, though I'd spent weeks doubting I deserved the role."
             P("theatre-rehearsal-1.jpg", "Rehearsal for Holy Crab!", "Rehearsal photo 1", "portrait"),
             P("theatre-rehearsal-2.jpg", "Rehearsal for Holy Crab!", "Rehearsal photo 2", "portrait"),
             P("theatre-holycrab-show-1.jpg", "Libby on stage as the Statue of Liberty", "Show-day photo 1", "portrait"),
@@ -296,7 +295,7 @@ const SITE = {
         },
         {
           wide: true, title: "Costume changes in under 20 seconds",
-          text: "During the show we stood by backstage to help actors change clothes in under 20 seconds for some scenes. We refined it into a rapid, no-hassle routine that prevented errors during performances.",
+          text: "During the show we stood by backstage to help actors change clothes in under 20 seconds for some scenes. We rehearsed each change until it was repeatable, which kept errors out of the performances.",
           photos: [
             P("theatre-filial-show-1.jpg", "Scene from Filial Cannibalism", "Show photo 1", "landscape"),
             P("theatre-filial-show-2.jpg", "Scene from Filial Cannibalism", "Show photo 2", "landscape"),
@@ -304,9 +303,8 @@ const SITE = {
         },
         {
           wide: true, title: "What theatre taught me",
-          text: "I learned two ways to build a character: embody their soul as an actress, or build their silhouette with costume. That mix of visual storytelling and human psychology became the base of my design approach: think in the user’s shoes, then find a solution.",
-          note: "I look forward to contributing the creative skills I’ve sharpened in theatre to the community and to group projects."
-        }
+          text: "I learned two ways to build a character: embody their soul as an actress, or build their silhouette with costume. That mix of visual storytelling and human psychology shapes my design approach. In theatre I asked what a character wants and what stands in the way. In my personas I ask the same thing, as goals and frustrations.",
+          note: "In group work, I bring the habits from backstage: preparing ahead, checking details, and staying calm when something changes mid-show.",
       ]
     }
   ],
@@ -348,7 +346,7 @@ const SITE = {
     ]
   },
 
-  ending: "Thank you for taking the time to explore my portfolio. Every project here reflects a piece of me. I hope it resonated with you in some way."
+  ending: "Thanks for looking. If something here sparks an idea, I'd love to talk."
 };
 
 /* ---------- renderer (no need to edit below) ---------- */
@@ -393,7 +391,7 @@ function home() {
   return `
 <section id="top" class="hero wrap">
   <h1>${esc(SITE.name)}</h1><p class="role">${esc(SITE.roleLine)}</p><p class="intro">${esc(SITE.intro)}</p>
-  <a class="btn" href="#/work">See my works</a>
+  <a class="btn" href="#/work">See my work</a>
   ${fig(SITE.cover)}
 </section>
 <section id="about" class="block wrap">
@@ -416,7 +414,7 @@ function home() {
 function projectPage(p) {
   const i = SITE.projects.indexOf(p), n = SITE.projects.length;
   const prev = SITE.projects[(i + n - 1) % n], next = SITE.projects[(i + 1) % n];
-  const pr = p.problem;
+  const pr = p.;
   return `<article class="wrap page">
   <a class="back" href="#/work">← All projects</a>
   <header class="phead"><h1>${esc(p.title)}</h1><p class="tagline">${esc(p.tagline)}</p><p class="lede">${esc(p.summary)}</p>
