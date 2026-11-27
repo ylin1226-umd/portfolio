@@ -272,12 +272,13 @@ const SITE = {
         },
         {
           title: "Learning to smile for real",
-          text: "In rehearsal I was repeatedly told my smile didn't look genuine. I practiced expressions in front of a mirror, then stopped watching myself and focused on what Libby was feeling in the scene. By show day I had worked through my stage fright, though I'd spent weeks doubting I deserved the role."
-            P("theatre-rehearsal-1.jpg", "Rehearsal for Holy Crab!", "Rehearsal photo 1", "portrait"),
-            P("theatre-rehearsal-2.jpg", "Rehearsal for Holy Crab!", "Rehearsal photo 2", "portrait"),
-            P("theatre-holycrab-show-1.jpg", "Libby on stage as the Statue of Liberty", "Show-day photo 1", "portrait"),
-            P("theatre-holycrab-show-2.jpg", "Cast of Holy Crab! on stage", "Show-day photo 2", "landscape")]
-        },
+          text: "In rehearsal I was repeatedly told my smile didn't look genuine. I practiced expressions in front of a mirror, then stopped watching myself and focused on what Libby was feeling in the scene. By show day I had worked through my stage fright, though I'd spent weeks doubting I deserved the role.",
+         photos: [
+         P("theatre-rehearsal-1.jpg", "Rehearsal for Holy Crab!", "Rehearsal photo 1", "portrait"),
+         P("theatre-rehearsal-2.jpg", "Rehearsal for Holy Crab!", "Rehearsal photo 2", "portrait"),
+         P("theatre-holycrab-show-1.jpg", "Libby on stage as the Statue of Liberty", "Show-day photo 1", "portrait"),
+         P("theatre-holycrab-show-2.jpg", "Cast of Holy Crab! on stage", "Show-day photo 2", "landscape")]
+},
         {
           title: "Filial Cannibalism: fixing our costume brief", stack: true,
           text: "The play is set in the Taiwanese countryside near the sea in the 2010s. Our first costume ideas were too modern and stylish, so we revised them into a picture board for five characters, from Grandpa (75) to Pei Fen Chen (20), that fit the script.",
@@ -304,10 +305,11 @@ const SITE = {
         {
           wide: true, title: "What theatre taught me",
           text: "I learned two ways to build a character: embody their soul as an actress, or build their silhouette with costume. That mix of visual storytelling and human psychology shapes my design approach. In theatre I asked what a character wants and what stands in the way. In my personas I ask the same thing, as goals and frustrations.",
-          note: "In group work, I bring the habits from backstage: preparing ahead, checking details, and staying calm when something changes mid-show.",
-      ]
-    }
-  ],
+         note: "In group work, I bring the habits from backstage: preparing ahead, checking details, and staying calm when something changes mid-show."
+}
+]
+}
+],
 
   photography: {
     heading: "Photography",
@@ -414,7 +416,7 @@ function home() {
 function projectPage(p) {
   const i = SITE.projects.indexOf(p), n = SITE.projects.length;
   const prev = SITE.projects[(i + n - 1) % n], next = SITE.projects[(i + 1) % n];
-  const pr = p.;
+  const pr = p.problem;
   return `<article class="wrap page">
   <a class="back" href="#/work">← All projects</a>
   <header class="phead"><h1>${esc(p.title)}</h1><p class="tagline">${esc(p.tagline)}</p><p class="lede">${esc(p.summary)}</p>
@@ -448,9 +450,11 @@ function contactSection() {
   return `<section id="contact" class="block wrap"><h2>Contact</h2>
   <div class="card"><p class="lede">${esc(C.note)}</p>
   ${C.location ? `<p class="muted">${esc(C.location)}</p>` : ""}
-  <p>${C.email ? b("mailto:" + C.email, "Email me", false) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p></div></section>`;
+  <p>${C.email ? b("mailto:" + C.email, "Email me", false) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p>
+  ${C.email ? `<p class="muted">Or copy my email: ${esc(C.email)}</p>` : ""}
+  </div></section>`;
 }
-${C.email ? `<p class="muted">Or copy my email: ${esc(C.email)}</p>` : ""}
+
 
 document.getElementById("foot").innerHTML = `<p>${esc(SITE.ending)}</p><b>Fin.</b>`;
 const navCv = document.getElementById("navResume");
