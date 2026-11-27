@@ -447,14 +447,12 @@ const contactLinks = () => [
 
 function contactSection() {
   const b = (href, label, ext) => `<a class="btn" href="${esc(href)}"${ext ? ' target="_blank" rel="noopener"' : ""}>${label}</a>`;
+  const gmail = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(C.email);
+   const mailChooser = `<span class="mailwrap"><button class="btn" id="mailBtn" type="button" aria-haspopup="true" aria-expanded="false">Email me</button><span class="mailmenu" id="mailMenu" role="menu" hidden><span class="mailhead">Create mail with:</span><a role="menuitem" href="${esc(gmail)}" target="_blank" rel="noopener">Gmail</a><a role="menuitem" href="mailto:${esc(C.email)}">Default mail app</a><button role="menuitem" type="button" id="copyMail" data-email="${esc(C.email)}">Copy address</button></span></span>`;
   return `<section id="contact" class="block wrap"><h2>Contact</h2>
   <div class="card"><p class="lede">${esc(C.note)}</p>
   ${C.location ? `<p class="muted">${esc(C.location)}</p>` : ""}
-  <p>${C.email ? b(
-  "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(C.email),
-  "Email me",
-  true
-) : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p></div></section>`;
+  <p>${C.email ? mailChooser : ""}${C.linkedin ? b(C.linkedin, "LinkedIn", true) : ""}${C.handshake ? b(C.handshake, "Handshake", true) : ""}${C.resume ? b(C.resume, "Download resume", true) : ""}</p></div></section>`;
 }
 
 document.getElementById("foot").innerHTML = `<p>${esc(SITE.ending)}</p><b>Fin.</b>`;
@@ -563,4 +561,30 @@ themeBtn.addEventListener("click", () => {
       return veil.animate({ opacity: [1, 0] }, { duration: 400, easing: "ease-out", fill: "forwards" }).finished;
     })
     .finally(() => { veil.remove(); switching = false; });
+});
+
+/* email chooser menu */
+document.addEventListener("click", e => {
+  const btn = document.getElementById("mailBtn"), menu = document.getElementById("mailMenu");
+  if (!btn || !menu) return;
+  if (e.target.closest("#mailBtn")) {
+    const open = menu.hidden;
+    menu.hidden = !open;
+    btn.setAttribute("aria-expanded", String(open));
+    return;
+  }
+  const copy = e.target.closest("#copyMail");
+  if (copy) {
+    navigator.clipboard?.writeText(copy.dataset.email)
+      .then(() => { copy.textContent = "Copied!"; setTimeout(() => { copy.textContent = "Copy address"; }, 1500); })
+      .catch(() => {});
+    return;
+  }
+  menu.hidden = true;
+  btn.setAttribute("aria-expanded", "false");
+});
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape") return;
+  const menu = document.getElementById("mailMenu"), btn = document.getElementById("mailBtn");
+  if (menu) { menu.hidden = true; btn?.setAttribute("aria-expanded", "false"); btn?.focus(); }
 });
